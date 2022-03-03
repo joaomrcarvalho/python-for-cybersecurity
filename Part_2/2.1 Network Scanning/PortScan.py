@@ -1,6 +1,6 @@
 from scapy.all import *
 
-ports = [25,80,53,443,445,8080,8443]
+ports = [25,80,53,443,445,8080,8443, 1234]
 
 def SynScan(host):
     ans,unans = sr(IP(dst=host)/TCP(dport=ports,flags="S"),timeout=2,verbose=0)
